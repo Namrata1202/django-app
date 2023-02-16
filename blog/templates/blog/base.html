@@ -1,0 +1,11 @@
+{%  extends 'blog/post_list.html' %}
+
+{% block content%}
+{% for p in post %}
+<article class="post">
+    
+    <h2><a href="post/{{p.id}}">{{ p.title }}</a></h2>
+    <p>{{ p.text|linebreaksbr }}</p>
+</article>
+{% endfor %}
+{% endblock %}

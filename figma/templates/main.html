@@ -1,0 +1,280 @@
+
+{%  extends 'Home.html' %}
+{% load static %}
+
+
+{% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .about{
+        position: absolute;
+width: 126.86px;
+height: 28.83px;
+left: 803.54px;
+top: 4644px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 30px;
+/* or 136% */
+
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+    }
+
+.contact{
+    position: absolute;
+width: 138.4px;
+height: 28.83px;
+left: 1116.09px;
+top: 4644px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 30px;
+/* or 136% */
+
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+}   
+.play{
+    position: absolute;
+width: 213.01px;
+height: 62.35px;
+left: 141.32px;
+top: 5210.8px;
+
+} 
+.stext{
+    width: 59px;
+height: 22px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+
+  </style>
+<link rel="stylesheet" href="{% static 'css/Main.css' %}">
+    
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous"
+></link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body >
+    
+    <div class="line">
+        The Exotic
+        Lakshadweep
+        islands
+      </div>
+      
+      
+      
+      <div class="cir">
+        
+        <img class="people" src="{%  static 'mysite/images/circle 3.png' %}" >
+      <img class="people" src="{%  static 'mysite/images/Layer 1 1 (1).png' %}" >
+      </div>
+      </div>
+
+
+<div class="myy">
+
+      <div class="w3-row"> 
+        
+        
+        {%  for p in scountry %}
+            <div class="w3-col l4  ">
+             <div class="aku" >
+              <div class="card" style="width: 23rem;">
+               <img class="card-img-top" src="{{p.image.url}}" alt="Card image cap" style="width:100%">
+                <div  class="card-body">
+                    
+                        <h5 class="content">{{p.title}}</h5>
+                        <p class="detail">{{p.description|truncatechars:30}}</p>
+                         <a href="#" class="btn btn-primary">book now</a>
+                    
+                        
+                    
+
+             </div>
+                   
+              </div>
+              </div>
+              </div>
+              {% endfor %}
+    </div>
+</div>
+
+
+
+
+               
+            <!-- <div class="box">
+                <button class="bthn">discover more </button> 
+              </div> -->
+                     <div class="lcontent" style="margin-top: auto;">
+                        <h1 class="island">Island Stays</h1>
+                        <p class="text">
+                            One can choose from a variety of beautiful coral islands which offers different staying experiences from thatched huts to luxurious modern properties. Every island offers a wider range of water sports and beach activities for you to enjoy.
+                        </p>
+                    </div>    
+                     
+ <div  class="w3-row">
+     {%   for p in country %}
+      <div class="photo">
+         <div class="w3-col l4 s12 ">
+            
+                <img class="islandd" src="{{p.image.url}}" alt="Card image cap" >
+            
+          
+          <div class="layout">
+            <h1 class="ltitle">{{p.title}}</h1>
+            <h1 class="ldes">{{p.description}}</h1>
+            <div class="eframe">
+                
+                    
+                
+                <button class="ebutton"><p class="btext">explore more</p></button>
+            </div>
+           
+          </div>
+         </div>
+    </div>
+{%  endfor %}
+
+
+</div> -->
+
+
+
+<div class="redy" >
+    <h1 class="redytext">Let’s Ready to Explore The World With Us.</h1>
+    <h1 class="redyy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur ac quam in congue</h1>
+    <div class="cta">
+        <h1 class="us">contact us</h1>
+    </div>
+
+    <h1 class="client">What Our Clients Says About Us</h1>
+</div>
+
+
+       <div style="margin-top: 700px;">
+
+        <div class="w3-row">
+        
+            {%  for p in client %}
+            
+               <div class="w3-col l4 s12 ">
+                 
+                  <div class="card" style="width: 20rem; height: 25rem; margin-top: 20px; margin-bottom: 30px; margin-left: 30px; margin-right: 20px;">
+                    <div style="margin-top: 20px; margin-left: 70px;">
+                   <img class="card-img-top" src="{{p.image.url}}" alt="Card image cap" style="border-radius: 50% ;width:150px; margin: auto;">
+                   </div>
+                    <div  class="card-body">
+                        <div>
+                            <h5  style="text-align: center;">{{p.title}}</h5>
+                            <p style="text-align: center ; margin-top: 20px; margin-bottom: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur ac quam in congue.</p>
+                             <div  style="text-align: center;">
+
+                            <span class="fa fa-star star"></span>
+                            <span class="fa fa-star star"></span>
+                              <span class="fa fa-star star"></span>
+                             <span class="fa fa-star  star"></span>
+                              <span class="fa fa-star  star"></span>
+
+                              </div>
+                        </div>
+                            
+                        
+    
+                 
+                       
+                  </div>
+                  </div>
+</div>   
+{% endfor %} 
+       </div> 
+       
+       
+
+
+<img class="foot" src="{%  static 'mysite/images/rectangle 14.jpg' %}" style="width: 100%;">
+
+<div class="cont">
+    <h1 class="down">Download Our App</h1>
+    <div >
+        <img style="margin-top:150px; margin-left: 150px;" src="{%  static 'mysite/images/play store.png' %}" >
+    </div>
+    
+</div>
+<h1 class="fcont">Lorem Ipsum is simply dummy text of the printing and type setting industry</h1>
+<h1 class="company">company</h1>
+<h1 class="events">event</h1>
+<h1 style="margin-top: 50px;" class="events">Blogs</h1>
+<h1 style="margin-top: 100px;" class="events">FAQ</h1>
+<h1 style="margin-top: 150px;" class="events">Join Us</h1>
+
+<h1 class="about">about</h1>
+<h1 style="margin-top: 50px;" class="about">Project</h1>
+<h1 style="margin-top: 100px;" class="about">Lorem</h1>
+<h1 style="margin-top: 150px;" class="about">Services</h1>
+<h1 style="margin-top: 200px;" class="about">Our Story</h1>
+<h1 class="contact">Contact</h1>
+<h1 style="margin-top: 50px;"  class="contact">abc@lorem.com</h1>
+<h1 style="margin-top: 100px;" class="contact">India</h1>
+
+
+
+<h1 class="eline"></h1>
+</div>
+
+
+              
+</body>
+</html>
+{% endblock %}
+

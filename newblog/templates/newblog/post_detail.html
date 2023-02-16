@@ -1,0 +1,112 @@
+
+{%  extends 'newblog/layout.html' %}
+{% include 'newblog/nav.html' %}
+
+{% block content%}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <article class="post">
+        {% if user.id == Nblog.user_id_id %}
+            <aside class="actions">
+                <a class="btn btn-secondary" href="/newblog/post_edit/{{Nblog.id}}">
+                    <img src="https://raw.githubusercontent.com/twbs/icons/main/icons/pencil-fill.svg" alt="pin" >
+                </a>
+            </aside>
+        {%  endif %}    
+        <h2>{{ Nblog.title }}</h2>
+        <p>{{Nblog.date}}</p>
+        <b>posted by:</b>{{Nblog.user_id.username}}
+        <p>{{ Nblog.dsc|linebreaksbr }}</p>
+        {%   if user.id == Nblog.user_id_id %}
+        <a class="date" href="/newblog/post_delete/{{Nblog.id}}">
+            <button>delete</button>
+        </a>
+        {% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        
+        <p>{{Nblog.likes.count}}</p>
+        {% for p in userr %}
+        
+        {% endfor %}
+        
+        {% if msg %}
+
+       <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+      </svg></button>
+      {% else %}
+        <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+            <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+          </svg></button>
+        
+        {% endif %}
+      </div>
+</form>
+<div class="container">
+<form action="/newblog/comments/{{Nblog.id}}/" method="POST">
+    {% csrf_token %}
+    <div>
+        
+        <input type="text" placeholder="enter comment" name="comment">
+        <input type="hidden" name="Pcomment" value="">
+        <button class="btn btn-primary">
+          post
+          </button>
+    </div>
+    
+
+</form>
+</div>
+<div class="container"><h3>Comments</h3></div>
+
+{% for p in Nblog.comments.all %}
+<div style="margin-right: 200px;">
+<div  class="container">
+<ol class="list-group ">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{p.usr.username}}</div>
+        {{p.body}}
+      </div>
+      <p>
+        <a class="btn btn-primary btn-sm" data-toggle="collapse" href="#rep{{p.pk}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+          reply
+        </a>
+        
+      </p>
+      <div class="collapse" id="rep{{p.pk}}">
+        <div class="card card-body my-1">
+          <form action="/newblog/comments/{{p.id}}/" method="POST">
+            {% csrf_token %}
+            <div>
+                
+                <input type="text" placeholder="enter reply" name="reply">
+                <input type="hidden"  name="pcomment" value="{{Nblog.id}}">
+                <button class="btn btn-primary">
+                  post
+                  </button>
+            </div>
+            
+        
+        </form>
+         </div>
+      </div>
+      
+      
+    </li>
+    
+    </ol>
+    </div>
+    </div>
+
+{% endfor %}
+
+
+    </article>
+
+    {%  endblock %}
+    

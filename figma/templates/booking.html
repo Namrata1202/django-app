@@ -1,0 +1,169 @@
+{%  extends 'Home.html' %}
+{% load static %}
+
+
+{% block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.newbook{
+
+width: 280px;
+height: 67px;
+margin-left: 220px;
+margin-top: 100px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 140%;
+/* or 67px */
+/*display: flex;
+align-items: center;
+text-transform: capitalize;*/
+
+color: #3A3A3A;
+}
+
+.ele{
+    position: absolute;
+width: 601px;
+height: 637.06px;
+margin-left: 10px;
+
+top: 670px;
+
+/* primary-color */
+
+
+}
+.boy{
+    position: absolute;
+width: 480.9px;
+height: 637.06px;
+left: 40.05px;
+top:340px;
+
+}
+.eml{
+    width: 66.52px;
+height: 32.76px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.frm{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+
+position: absolute;
+width: 599px;
+height: 380px;
+right: 70px;
+top: 636px;
+}
+.lft{
+    position: absolute;
+width: 601px;
+height: 637.06px;
+left: 10px;
+top: 100px;
+}
+.login{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 32px;
+
+position: absolute;
+width: 599px;
+height: 300px;
+left: 800px;
+
+top: 536px;
+
+}
+.eml{
+    width: 66.52px;
+height: 32.76px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.put{
+    position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+/* primary-color */
+
+border: 2px solid #3282AD;
+border-radius: 10px;
+}
+    </style>
+    <link rel="stylesheet" href="{% static 'css/Booking.css' %}">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1  class="newbook" > My Booking</h1>
+    <img class="vlayout" src="{%  static 'mysite/images/Vector (1).png' %}" >
+    
+  <div class="lft">
+    <div class="ele">
+        
+    <img src="{%  static 'mysite/images/Ellipse 4.png' %}" >
+    </div>
+    <img class="boy" src="{%  static 'mysite/images/tourist-with-thumb-up__1_-removebg 1.png' %}" >
+    </div>
+    <div class="login">
+        <h1 class="eml">Email</h1>
+        
+    </div>
+
+</body>
+</html>
+
+{% endblock %}

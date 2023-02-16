@@ -1,0 +1,306 @@
+
+.logo{
+position: absolute;
+width: 99.35px;
+height: 56px;
+left: 70px;
+top: 40px;
+
+
+}
+.navv{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+
+position: absolute;
+width: 675px;
+height: 22px;
+left: 255px;
+top: 57px;
+
+}
+.hed{
+    width: 132px;
+height: 22px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: black;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.navv2{
+    position: absolute;
+width: 69px;
+height: 22px;
+left: 156px;
+top: 0px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #3A3A3A;
+}
+.navv3{
+    position: absolute;
+width: 152px;
+height: 22px;
+left: 265.49px;
+top: 0px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #3A3A3A;
+
+
+}
+.navv4{
+
+    width: 69px;
+    height: 22px;
+    left: 356px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+    
+    /* display: flex;
+    align-items: center;
+    text-transform: capitalize; */
+    
+    color: #3A3A3A;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    
+
+}
+.navv5{
+width: 26px;
+height: 22px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #3A3A3A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 4;
+flex-grow: 0;
+
+}
+.navv6{
+ width: 61px;
+height: 22px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #3A3A3A;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 5;
+flex-grow: 0;
+}
+.vector{
+    position: absolute;
+width: 8.49px;
+height: 5.66px;
+left: 233px;
+top: 8px;
+}
+
+.luser{
+position: absolute;
+width: 195px;
+height: 54px;
+left: 1101px;
+top:-41px;
+
+}
+.lbtn{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+position: absolute;
+width: 58px;
+height: 38px;
+right: 207px;
+top: 49px;
+}
+
+.new{
+    
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 10px;
+
+position: absolute;
+width: 123px;
+height: 54px;
+right: 70px;
+top: 41px;
+border-color: blue;
+background: rgba(5, 100, 153, 0.8);
+border-radius: 44px;
+}
+
+.rec{
+    position: absolute;
+width: 197px;
+height: 64px;
+left: 35px;
+top: 150px;
+
+/* dark-light blue */
+
+background: #D2F4FF;
+border-radius: 44px;
+}
+.emg{
+    
+    
+position: absolute; 
+width: 70px;
+height: 50px;
+
+left: 150px;
+top: 236px;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 140%;
+/* or 50px */
+padding: 20px;
+
+display: flex;
+align-items: center;
+
+color: #3A3A3A;
+
+}
+.line{
+    position: absolute;
+width: 500px;
+height: 243px;
+
+top: 200px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 650;
+font-size: 57px;
+line-height: 140%;
+/* or 90px */
+
+display: flex;
+align-items: center;
+
+color: #3A3A3A;
+}
+
+.lulu{
+    position: absolute;
+height: 848px;
+left: 0%;
+right: 0%;
+top: 0px;
+
+background: linear-gradient(180deg, #E5F8FE 14.25%, rgba(255, 255, 255, 0) 100%);
+}
+
+.stext{
+    width: 59px;
+height: 22px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+

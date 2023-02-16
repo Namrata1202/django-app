@@ -1,0 +1,13 @@
+
+{%  extends 'newblog/layout.html' %}
+
+{% block content %}
+   {%  for p in fblog %}
+    <article class="post">
+        
+            
+        <h2><a href="/newblog/post_detail/{{p.id}}">{{p.title}}</a></h2>
+        <p>{{ p.dsc|linebreaksbr }}</p>
+    </article>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ 
+    
+    <head>
+      <style>
+        .nam {
+          
+          margin-top: 50px;
+          margin-bottom: 100px;
+          margin-right: 250px;
+          margin-left: 180px;
+          background-color: lightblue;
+        }
+        .ma{
+          margin-left: 80px;
+          margin-right: 90px;
+        }
+        </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  
+  {% include "nav.html" %}
+  <h1 class="text-center my-3">UPDATE EMPLOYE</h1>
+  <div class="nam">
+  <div class="card">
+    <div class="card-body">
+      <form class="ma" action="/employe/doupdate_emp/{{emp.id}}"  method="POST" >
+        {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Name</label>
+    <input type="text" class="form-control" name="Ename" value="{{emp.name}}">
+  </div>
+ 
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Employe_id</label>
+    <input type="text" class="form-control" name="Eid" placeholder="employe_id" value="{{emp.emp_id}}">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Number</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" name="Enumber" value="{{emp.phone}}" >
+  </div>
+<div class="mb-3 form-check">
+  <label for="address">working</label>
+  <input {% if emp.working %} checked {% endif %} type="checkbox" class="form-check-input" name="Eworking">
+</div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="Eaddress"  >{{emp.address}}</textarea>
+  </div>
+<div class="container text-center">
+  <button class="btn btn-primary">
+    UPDATE EMPLOYE
+  </button>
+</div>
+
+  </form>
+  </div>
+  </div>
+  </div>
+  </body>
+</html>

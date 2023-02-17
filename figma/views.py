@@ -17,5 +17,6 @@ def booking(request):
     return render(request,"booking.html")  
 
 def gallery(request):
+    print("entered here")
     return render(request,"Gallery.html")      
 

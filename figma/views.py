@@ -18,5 +18,6 @@ def booking(request):
 
 def gallery(request):
     print("entered here")
+    print("new")
     return render(request,"Gallery.html")      
 

@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
    path('api/', include('rest_framework.urls')),
     path('',include('figma.urls')),
+    path('newblog/', include('newblog.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
